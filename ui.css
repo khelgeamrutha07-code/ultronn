@@ -1,0 +1,443 @@
+/* =========================================================
+   ULTRON CINEMATIC INTERFACE
+   ========================================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&display=swap');
+
+/* ---------- MAIN BACKGROUND ---------- */
+
+.stApp {
+    background:
+        radial-gradient(circle at 50% 0%, rgba(150, 0, 0, 0.22), transparent 35%),
+        radial-gradient(circle at 0% 100%, rgba(100, 0, 0, 0.12), transparent 30%),
+        linear-gradient(135deg, #030303 0%, #080808 50%, #020202 100%);
+    color: #eeeeee;
+    font-family: 'Orbitron', sans-serif;
+}
+
+
+/* ---------- TOP GLOW ---------- */
+
+.stApp::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: #ff0000;
+    box-shadow:
+        0 0 10px #ff0000,
+        0 0 30px #ff0000,
+        0 0 60px #ff0000;
+    z-index: 9999;
+}
+
+
+/* ---------- ULTRON TITLE ---------- */
+
+h1 {
+    text-align: center !important;
+    font-family: 'Orbitron', sans-serif !important;
+    font-size: 70px !important;
+    font-weight: 900 !important;
+    letter-spacing: 15px !important;
+
+    color: #ff1a1a !important;
+
+    text-shadow:
+        0 0 5px #ff0000,
+        0 0 15px #ff0000,
+        0 0 35px #990000,
+        0 0 70px rgba(255, 0, 0, 0.6);
+
+    margin-top: 20px !important;
+    margin-bottom: 5px !important;
+}
+
+
+/* ---------- SUBTITLE ---------- */
+
+h2, h3, h4 {
+    font-family: 'Orbitron', sans-serif !important;
+    color: #ff3333 !important;
+
+    text-shadow:
+        0 0 5px rgba(255, 0, 0, 0.8),
+        0 0 15px rgba(255, 0, 0, 0.4);
+
+    letter-spacing: 3px;
+}
+
+
+/* ---------- NORMAL TEXT ---------- */
+
+p, li, label, span {
+    color: #cccccc !important;
+}
+
+
+/* ---------- COMMAND TERMINAL ---------- */
+
+div[data-testid="stTextInput"] {
+    background: rgba(15, 15, 15, 0.85);
+    border: 1px solid #550000;
+    border-radius: 8px;
+    padding: 8px;
+
+    box-shadow:
+        inset 0 0 15px rgba(255, 0, 0, 0.05),
+        0 0 15px rgba(255, 0, 0, 0.08);
+}
+
+
+/* ---------- INPUT BOX ---------- */
+
+input {
+    background: #090909 !important;
+    color: #ffffff !important;
+
+    border: 1px solid #660000 !important;
+    border-radius: 5px !important;
+
+    font-family: 'Orbitron', sans-serif !important;
+}
+
+
+/* INPUT FOCUS */
+
+input:focus {
+    border: 1px solid #ff0000 !important;
+
+    box-shadow:
+        0 0 5px #ff0000,
+        0 0 15px rgba(255, 0, 0, 0.5) !important;
+}
+
+
+/* ---------- EXECUTE BUTTON ---------- */
+
+.stButton > button {
+
+    width: 100%;
+
+    background:
+        linear-gradient(
+            135deg,
+            #260000,
+            #8b0000,
+            #260000
+        );
+
+    color: #ffffff !important;
+
+    border: 1px solid #ff0000 !important;
+
+    border-radius: 5px !important;
+
+    font-family: 'Orbitron', sans-serif !important;
+
+    font-weight: 700 !important;
+
+    letter-spacing: 3px;
+
+    padding: 14px;
+
+    transition: all 0.25s ease;
+
+    box-shadow:
+        0 0 8px rgba(255, 0, 0, 0.3),
+        inset 0 0 10px rgba(255, 0, 0, 0.2);
+}
+
+
+/* BUTTON HOVER */
+
+.stButton > button:hover {
+
+    background:
+        linear-gradient(
+            135deg,
+            #550000,
+            #ff0000,
+            #550000
+        );
+
+    border-color: #ff3333 !important;
+
+    box-shadow:
+        0 0 10px #ff0000,
+        0 0 25px rgba(255, 0, 0, 0.7),
+        inset 0 0 15px rgba(255, 255, 255, 0.15);
+
+    transform: translateY(-2px);
+}
+
+
+/* ---------- DIVIDERS ---------- */
+
+hr {
+
+    border: none !important;
+
+    height: 1px !important;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            #ff0000,
+            transparent
+        ) !important;
+
+    box-shadow:
+        0 0 8px rgba(255, 0, 0, 0.8);
+}
+
+
+/* ---------- CODE BLOCK ---------- */
+
+pre {
+
+    background:
+        linear-gradient(
+            135deg,
+            #080808,
+            #111111
+        ) !important;
+
+    border: 1px solid #550000 !important;
+
+    border-left: 4px solid #ff0000 !important;
+
+    box-shadow:
+        0 0 15px rgba(255, 0, 0, 0.15);
+
+    color: #ff4444 !important;
+}
+
+
+/* ---------- CAPTION ---------- */
+
+.stCaption {
+
+    color: #777777 !important;
+
+    letter-spacing: 1px;
+}
+
+
+/* ---------- STATUS PANEL ---------- */
+
+.status-panel {
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(30, 0, 0, 0.8),
+            rgba(5, 5, 5, 0.9)
+        );
+
+    border: 1px solid #550000;
+
+    border-left: 3px solid #ff0000;
+
+    padding: 15px;
+
+    border-radius: 5px;
+
+    box-shadow:
+        0 0 20px rgba(255, 0, 0, 0.12);
+}
+
+
+/* ---------- ONLINE STATUS ---------- */
+
+.online {
+
+    color: #00ff66 !important;
+
+    font-weight: bold;
+
+    text-shadow:
+        0 0 5px #00ff66,
+        0 0 15px #00ff66;
+}
+
+
+/* ---------- CHAT MESSAGE ---------- */
+
+.chat-box {
+
+    background:
+        linear-gradient(
+            135deg,
+            #0b0b0b,
+            #121212
+        );
+
+    border: 1px solid #440000;
+
+    border-left: 4px solid red;
+
+    border-radius: 6px;
+
+    padding: 15px;
+
+    margin: 10px 0;
+
+    box-shadow:
+        0 0 15px rgba(255, 0, 0, 0.1);
+}
+
+
+/* ---------- FILE UPLOADER ---------- */
+
+[data-testid="stFileUploader"] {
+
+    background: rgba(10, 10, 10, 0.8);
+
+    border: 1px dashed #770000;
+
+    border-radius: 8px;
+
+    padding: 10px;
+
+    box-shadow:
+        0 0 15px rgba(255, 0, 0, 0.08);
+}
+
+
+/* ---------- SLIDER ---------- */
+
+[data-testid="stSlider"] {
+
+    color: #ff0000 !important;
+}
+
+
+/* ---------- CHECKBOX ---------- */
+
+[data-testid="stCheckbox"] {
+
+    color: #dddddd !important;
+}
+
+
+/* ---------- RADIO ---------- */
+
+[data-testid="stRadio"] {
+
+    color: #dddddd !important;
+}
+
+
+/* ---------- SELECT BOX ---------- */
+
+[data-baseweb="select"] {
+
+    background: #0a0a0a !important;
+
+    border: 1px solid #550000 !important;
+}
+
+
+/* ---------- IMAGE ---------- */
+
+img {
+
+    border-radius: 8px;
+
+    border: 1px solid #550000;
+
+    box-shadow:
+        0 0 20px rgba(255, 0, 0, 0.2);
+}
+
+
+/* ---------- SCROLLBAR ---------- */
+
+::-webkit-scrollbar {
+    width: 7px;
+}
+
+::-webkit-scrollbar-track {
+    background: #030303;
+}
+
+::-webkit-scrollbar-thumb {
+
+    background: #660000;
+
+    border-radius: 10px;
+
+    box-shadow:
+        0 0 10px #ff0000;
+}
+
+::-webkit-scrollbar-thumb:hover {
+
+    background: #ff0000;
+
+}
+
+
+/* ---------- SELECTION ---------- */
+
+::selection {
+
+    background: #ff0000;
+
+    color: white;
+}
+
+
+/* ---------- CAMERA ---------- */
+
+[data-testid="stCameraInput"] {
+
+    border: 1px solid #660000;
+
+    border-radius: 8px;
+
+    box-shadow:
+        0 0 15px rgba(255, 0, 0, 0.1);
+}
+
+
+/* ---------- AUDIO ---------- */
+
+audio {
+
+    width: 100%;
+
+    filter:
+        sepia(1)
+        saturate(4)
+        hue-rotate(315deg);
+}
+
+
+/* ---------- VIDEO ---------- */
+
+video {
+
+    border: 1px solid #550000;
+
+    border-radius: 8px;
+
+    box-shadow:
+        0 0 20px rgba(255, 0, 0, 0.15);
+}
+
+
+/* ---------- MOBILE ---------- */
+
+@media (max-width: 768px) {
+
+    h1 {
+        font-size: 42px !important;
+        letter-spacing: 8px !important;
+    }
+
+}
